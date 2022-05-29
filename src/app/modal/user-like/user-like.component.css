@@ -1,0 +1,12 @@
+.content{
+    text-align: center;
+}
+
+.btn-actions{
+    position: relative;
+}
+
+.btn-okey{
+    position: absolute;
+    right: 0;
+}

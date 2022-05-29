@@ -1,18 +1,34 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule} from '@angular/material/button';
 import { AppComponent } from './app.component';
+import { TinderInfoComponent } from './tinder-info/tinder-info.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UserLikeComponent } from './modal/user-like/user-like.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    TinderInfoComponent,
+    UserLikeComponent
+  ],
+  bootstrap: [
+    AppComponent
+  ],
 })
-export class AppModule { }
+export class AppModule {
+}

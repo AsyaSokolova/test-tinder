@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div style="height: 100%; width: 400px" 
+        *ngIf="currentUser">
+        <div class="content-photo" 
+            [style.background]="'url(' + currentUser.photo + ')'">
+
+            <div class="content-info">
+                {{currentUser.firstName}}, {{currentUser.age}}
+            </div>
+        </div>
+
+
+        <div class="btn-action">
+            <button mat-stroked-button 
+                    color="primary" 
+                    (click)="likePhoto()">
+                    Like
+            </button>
+
+            <button class="btn-right" 
+                    mat-stroked-button 
+                    color="primary" 
+                    (click)="nextPhoto()">
+                Dislike
+            </button>
+        </div>
+    </div>
+
+</div>
