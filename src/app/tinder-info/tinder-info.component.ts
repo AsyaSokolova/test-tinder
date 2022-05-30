@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user.model';
-import { UserService } from '../service/user.service';
 import { MatDialog } from '@angular/material/dialog';
-import { UserLikeComponent } from '../modal/user-like/user-like.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from '../models/user.model';
+import { UserLikeComponent } from '../modal/user-like/user-like.component';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-tinder-info',

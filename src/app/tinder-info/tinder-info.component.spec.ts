@@ -1,28 +1,16 @@
-import { OverlayModule } from '@angular/cdk/overlay';
-import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
+import { MatDialogStub } from '../unit-test/stubs/mat-dialog.stub';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { of, throwError } from 'rxjs';
-import { UserService } from '../service/user.service';
-import { UserMock } from '../unit-test/mocks/user.mock';
-import { UserServiceStub } from '../unit-test/stubs/user-service.stub';
-
+import { MatSnackBarStub } from '../unit-test/stubs/mat-snack-bar.stub';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { TinderInfoComponent } from './tinder-info.component';
+import { UserMock } from '../unit-test/mocks/user.mock';
+import { UserService } from '../service/user.service';
+import { UserServiceStub } from '../unit-test/stubs/user-service.stub';
+import { of, throwError } from 'rxjs';
 
-class MatDialogStub {
-  open() {
-    return {
-      afterClosed: () => of(true)
-    }
-  }
-}
-
-class MatSnackBarStub {
-  open() {
-    return
-  }
-}
 
 describe('TinderInfoComponent', () => {
   let component: TinderInfoComponent;
